@@ -32,7 +32,7 @@ export class TasksService {
                 title: taskData.title,
                 status: TasksStatusEnum.PENDING,
                 description: taskData.description,
-                priority: TasksPriorityEnum,
+                priority: TasksPriorityEnum.ONE,
                 expirationDate: taskData.expirationDate,
                 userId_creator: decoded.sub,
                 userId_responsible: taskData.userId_responsible,

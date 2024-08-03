@@ -26,6 +26,8 @@ export class AuthService {
 
     async signIn(username: string, password: string): Promise<AuthResponseDto> {
         const foundUser = await this.userService.findByUsername(username);
+        console.log(foundUser);
+        
         if (!foundUser || !bcryptCompareSync(password, foundUser.password)) {
             throw new UnauthorizedException();
         }
